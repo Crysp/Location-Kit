@@ -1,0 +1,11 @@
+.container {
+  position: fixed;
+  pointer-events: none;
+  background-color: red;
+  opacity: 1;
+  transition: transform linear 0.05s, opacity ease-in-out 0.1s;
+}
+
+.hidden {
+  opacity: 0;
+}

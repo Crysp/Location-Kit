@@ -21,6 +21,7 @@
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
   <depends>com.intellij.modules.platform</depends>
   <depends>com.intellij.platform.images</depends>
+  <depends>com.intellij.modules.lang</depends>
 
   <!-- Extension points defined by the plugin.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -34,5 +35,12 @@
     <fileEditorProvider
       implementation="org.intellij.sdk.language.GeoJSONFileEditorProvider"/>
     <lang.parserDefinition language="GeoJSON" implementationClass="org.intellij.sdk.language.GeoJSONParserDefinition" />
+  </extensions>
+  <extensions defaultExtensionNs="JavaScript">
+    <JsonSchema.ProviderFactory
+      implementation="org.intellij.sdk.language.GeoJSONSchemaProviderFactory"/>
+  </extensions>
+  <extensions defaultExtensionNs="com.intellij.json">
+    <jsonLikePsiWalkerFactory implementation="org.intellij.sdk.language.GeoJSONSchemaPsiWalkerFactory"/>
   </extensions>
 </idea-plugin>

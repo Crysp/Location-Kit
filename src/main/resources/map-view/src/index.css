@@ -1,0 +1,205 @@
+@import url("fonts.css");
+
+html {
+  height: 0;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#map {
+  flex: 1;
+}
+
+.popover {
+  z-index: 1000;
+}
+
+.popover .mapboxgl-popup-content {
+  padding: 8px 12px;
+  background-color: #2B2D30;
+  border: 1px solid #43454A;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 25%);
+}
+
+.popover .mapboxgl-popup-close-button {
+  display: none;
+}
+
+.popover .mapboxgl-popup-tip {
+  position: relative;
+}
+
+.popover .mapboxgl-popup-tip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border: 10px solid transparent;
+}
+
+.popover.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-bottom: none;
+  border-top-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip::before {
+  border-bottom: none;
+  border-top-color: #2B2D30;
+  transform: translate(-50%, calc(-100% - 2px));
+}
+
+.popover.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+  border-top: none;
+  border-bottom-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-top .mapboxgl-popup-tip::before {
+  border-top: none;
+  border-bottom-color: #2B2D30;
+  transform: translate(-50%, 2px);
+}
+
+.popover.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  border-left: none;
+  border-right-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-left .mapboxgl-popup-tip::before {
+  border-left: none;
+  border-right-color: #2B2D30;
+  transform: translate(2px, -50%);
+}
+
+.popover.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  border-right: none;
+  border-left-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-right .mapboxgl-popup-tip::before {
+  border-right: none;
+  border-left-color: #2B2D30;
+  transform: translate(calc(-100% - 2px), -50%);
+}
+
+.popover.mapboxgl-popup-anchor-top-left .mapboxgl-popup-content {
+  border-top-left-radius: 0;
+}
+
+.popover.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
+  border-top: none;
+  border-left: none;
+  border-bottom-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip::before {
+  border-top: none;
+  border-left: none;
+  border-bottom-color: #2B2D30;
+  transform: translate(1px, 2px);
+}
+
+.popover.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-content {
+  border-bottom-left-radius: 0;
+}
+
+.popover.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+  border-bottom: none;
+  border-left: none;
+  border-top-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip::before {
+  border-bottom: none;
+  border-left: none;
+  border-top-color: #2B2D30;
+  transform: translate(1px, calc(-100% - 2px));
+}
+
+.popover.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-content {
+  border-bottom-right-radius: 0;
+}
+
+.popover.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  border-bottom: none;
+  border-right: none;
+  border-top-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip::before {
+  border-bottom: none;
+  border-right: none;
+  border-top-color: #2B2D30;
+  transform: translate(calc(-100% - 1px), calc(-100% - 2px));
+}
+
+.popover.mapboxgl-popup-anchor-top-right .mapboxgl-popup-content {
+  border-top-right-radius: 0;
+}
+
+.popover.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  border-top: none;
+  border-right: none;
+  border-bottom-color: #43454A;
+}
+
+.popover.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip::before {
+  border-top: none;
+  border-right: none;
+  border-bottom-color: #2B2D30;
+  transform: translate(calc(-100% - 1px), 2px);
+}
+
+.popover .popover-header {
+  font: normal 12px "JetBrains Mono", monospace;
+}
+
+.popover .popover-main {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #393B40;
+  font: normal 13px sans-serif;
+  line-height: 20px;
+}
+
+.popover .popover-main ul {
+  padding: 0;
+  margin: 0;
+}
+
+.popover .popover-main li {
+  list-style: none;
+}
+
+.popover .property-key {
+  color: #8D8D8E;
+  margin-right: 4px;
+}
+
+.popover .property-value {
+  color: #fff;
+}
+
+.debug {
+  display: none;
+  flex: 1;
+}
+
+.debug-enabled {
+  display: block;
+}
